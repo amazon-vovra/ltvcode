@@ -116,6 +116,19 @@ section {
   margin-left: 20px;
 }
 
+.btn-form-submit:hover {
+  background: #F2DA56;
+}
+
+.btn-form-submit:active {
+  background: #F6BC25;
+}
+
+.btn-form-submit:focus {
+  background-image: linear-gradient(225deg, #F2DA56 0%, #F6BC25 100%);
+  box-shadow: 0 3px 0 0 #A6953B, inset 0 1px 0 0 #FFFFFF;
+}
+
 .input-group > .form-control {
   height: 70px;
   background: #FFF;
@@ -172,7 +185,10 @@ section {
     height: 50px;
   }
   .btn-form-submit {
-    margin: 12px 0 0 0;
+    margin: 34px 0 0 0;
+  }
+  .input-group.error .error-msg {
+    bottom: 52px;
   }
 }
 
@@ -271,6 +287,29 @@ section {
     margin-right: 10.6px;
   }
 }
+
+/* ************************************************************
+***************************************************************
+--- [SECTION][LOADING PAGE] Loading ---
+***************************************************************
+************************************************************ */
+
+.waiting {
+  background: #F8F8F8;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.loading-spinner>img {
+  display: block;
+  margin: auto;
+}
+.loading-content {
+  margin-top: 30px;
+  text-align: center;
+}
+
 
 /* ************************************************************
 ***************************************************************

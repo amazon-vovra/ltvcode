@@ -14,6 +14,9 @@ $(document).ready(function () {
     }
 
     if (x === true) {
+      $(".above-the-fold").hide();
+      $(".features").hide();
+      $(".waiting").show();
       document.querySelector('input[type="text"]').parentNode.classList.remove("error");
       const proxyurl = "";
       const url =
@@ -24,7 +27,12 @@ $(document).ready(function () {
           localStorage.setItem("userObject", contents);
           window.location.href = "result.html";
         })
-        .catch((e) => console.log(e));
+        .catch((e) => {
+          $(".above-the-fold").show();
+          $(".features").show();
+          $(".waiting").hide();
+          console.log(e)
+        });
     } else if (x !== true) {
       document.querySelector('input[type="text"]').parentNode.classList.add("error");
     }
