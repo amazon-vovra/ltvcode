@@ -146,6 +146,54 @@ section {
   display: none;
 }
 
+.search-tabs {
+  margin-bottom: 30px;
+  display: flex;
+} 
+
+.search-tabs > p{
+  margin-left: 0;
+  margin-right: 25px;
+  line-height: 35px;
+} 
+
+#phone-tab{
+  margin-left: 20px;
+} 
+
+.tab {
+  border: 3px solid #F6BC25;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #F6BC25;
+  letter-spacing: 0;
+  font-weight: 700;
+  background-color: #004A80;
+  width: 148px;
+  height: 35px;
+}
+
+.tab:focus{
+  outline: none;
+}
+
+.tab-active {
+  color: #004A80;
+  background: #F6BC25;
+}
+
+.tab-active:before {
+  content: "";
+  position: absolute;
+  top: 309px;
+  width: 0;
+  height: 0;
+  margin-left: 56px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #F6BC25;
+}
+
 .input-group.error .error-msg {
   display: block;
   position: absolute;
@@ -173,6 +221,20 @@ section {
   line-height: normal;
 }
 
+.search-tabs {
+  display: flex;
+}
+
+#phone-input {
+  display: none
+}
+
+@media (max-width: 991px) {
+  .tab-active:before {
+    top: 296px;
+  }
+}
+
 @media (max-width: 767px) {
   .input-group {
     flex-direction: column;
@@ -189,6 +251,24 @@ section {
   }
   .input-group.error .error-msg {
     bottom: 52px;
+  }
+  .tab-active:before {
+    top: 243px;
+  }
+}
+
+@media (max-width: 522px) {
+  .search-tabs > p{
+    display: none;
+  } 
+  .tab-active:before {
+    top: 243px;
+  }
+}
+
+@media (max-width: 450px) {
+  .tab-active:before {
+    top: 262px;
   }
 }
 

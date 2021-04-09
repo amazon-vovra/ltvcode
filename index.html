@@ -29,8 +29,14 @@
         </div>
         
         <form>
+          <div class="search-tabs">
+            <p class="form-subtext">TYPE OF SEARCH:</p>
+            <button id="email-tab" class="tab tab-active">EMAIL ADDRESS</button>
+            <button id="phone-tab" class="tab">PHONE NUMBER</button>
+          </div>
           <div class="input-group">
-            <input class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
+            <input id="email-input" class="form-control" type="text" name="email" placeholder="Enter an Email Address" />
+            <input id="phone-input" class="form-control" type="text" name="phone" placeholder="Enter a Phone Number" />
             <p class="error-msg">Please enter a valid email address</p>
             <button id="btn-search" class="btn btn-form-submit text-uppercase" type="submit">Go!</button>
           </div>
@@ -110,7 +116,7 @@
         </div>
       </div>
     </section>
-    
+
     <footer class="footer">
       <div class="container">
         <div class="row align-items-center">
@@ -127,6 +133,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.1.62/jquery.inputmask.bundle.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
