@@ -5,6 +5,7 @@ $(document).ready(function () {
       mask: phones, 
       greedy: false, 
       definitions: { '#': { validator: "[0-9]", cardinality: 1}} });
+  $(".waiting").hide();
   $("#phone-tab").on("click", function (e) {
     e.preventDefault();
     $('#phone-input').css('display','block');
